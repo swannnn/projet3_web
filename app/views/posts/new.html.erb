@@ -1,0 +1,19 @@
+<h1 class="text-center">Nouvelle Article</h1>
+	<div class="col-md-8 col-md-offset-2">
+	<%= form_for :post, url: posts_path do |f| %>
+		<p>
+			<%= f.label :title, "Titre" %>
+			<%= f.text_field :title , class: 'form-control' %>
+		</p>
+		<p>
+			<%= f.label :body, "Article" %>
+			<%= f.text_area :body, class: 'form-control' %>
+		</p>
+		<p>
+			<%= f.submit "Créer", class: 'btn btn-primary' %>
+			<%= link_to 'Retour', posts_path, class: 'btn btn-danger' %>
+		</p>
+	</div>
+
+
+	<% end %>

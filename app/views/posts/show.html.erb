@@ -1,0 +1,13 @@
+<h1 class="text-center"> Blog Alice et Swan </h1>
+<div class="col-md-8 col-offset-3">
+	<div class="panel panel-success">
+		  <div class="panel-heading"><%= @post.title %></div>
+		<div class="panel-body">
+			<%= @post.body %>
+		</div>
+	</div>
+	<%= link_to 'Retour', posts_path, class: 'btn btn-danger' %>
+
+</div>
+
+

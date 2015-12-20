@@ -1,0 +1,19 @@
+<h1 class="text-center">Edition Article</h1>
+	<div class="col-md-8 col-md-offset-2">
+	<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
+		<p>
+			<%= f.label :title, "Titre" %>
+			<%= f.text_field :title , class: 'form-control' %>
+		</p>
+		<p>
+			<%= f.label :body, "Article" %>
+			<%= f.text_area :body, class: 'form-control' %>
+		</p>
+		<p>
+			<%= f.submit "Modifier", class: 'btn btn-primary' %>
+			<%= link_to 'Annuler', posts_path, class: 'btn btn-danger' %>
+		</p>
+	</div>
+
+
+	<% end %>

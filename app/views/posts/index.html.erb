@@ -1,0 +1,15 @@
+<h1 class="text-center"> Blog Alice et Swan </h1>
+<div class="col-md-8 col-offset-3">
+	<% @post.each do |post| %>
+		<div class="panel panel-success">
+	  <div class="panel-heading"><%= link_to post.title, post %></div>
+	  <div class="panel-body">
+	    <%= link_to 'Supprimer', post_path(post),
+              method: :delete, class: 'btn btn-danger' %>
+        <%= link_to 'Modifier', edit_post_path(post), class: 'btn btn-success' %>
+	  </div>
+	</div>
+	<% end %>
+</div>
+<%= link_to 'Nouvelle Article', new_post_path, class: 'btn btn-primary' %>
+
